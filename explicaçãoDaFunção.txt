@@ -1,0 +1,28 @@
+function verificarPalindromo(texto) {
+  const letras = texto.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const inverso = letras.split('').reverse().join('');
+  return letras === inverso;
+}
+
+Essa função em JavaScript tem o objetivo de verificar se uma determinada string é um palíndromo. Palíndromo é uma palavra, frase, número ou qualquer outra sequência de caracteres que pode ser lida da esquerda para a direita ou da direita para a esquerda, mantendo-se a mesma sequência de caracteres. Por exemplo, "arara" é um palíndromo, pois se lido de trás para frente, resultará na mesma palavra.
+
+Analisando a função passo a passo
+
+function verificarPalindromo(texto) {
+
+A função é declarada com o nome "verificarPalindromo" e recebe um parâmetro "texto", que é a string que será verificada.
+
+A função é declarada com o nome "verificarPalindromo" e recebe um parâmetro "texto", que é a string que será verificada.
+
+  const letras = texto.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+Na primeira linha da função, criamos uma variável "letras" que receberá a string em minúsculas e sem caracteres especiais. Para isso, usamos a função toLowerCase() para transformar todas as letras em minúsculas e replace(/[^a-z0-9]/g, '') para substituir qualquer caracter que não seja uma letra ou um número por uma string vazia.
+
+  const inverso = letras.split('').reverse().join('');
+
+Na segunda linha da função, criamos uma variável "inverso" que receberá a string "letras" invertida. Para isso, usamos a função split('') para transformar a string em um array de caracteres, reverse() para inverter a ordem dos caracteres e join('') para unir novamente em uma string.
+
+  return letras === inverso;
+}
+
+Por fim, na terceira linha, a função retorna um valor booleano, comparando se a string "letras" é igual à string "inverso". Se forem iguais, significa que a string original é um palíndromo e a função retorna true. Se forem diferentes, significa que a string não é um palíndromo e a função retorna false.
